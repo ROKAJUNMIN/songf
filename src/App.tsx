@@ -1,18 +1,16 @@
-import { useEffect } from "react"
-import Api, { Method } from "./api"
 
+import { Canvas } from "@react-three/fiber"
+import Box from "./components/Box"
 function App() {
 
-  useEffect(() => {
-    const data = async () => {
-      return await Api().getAlbum()
-    }
-    console.log(data())
-  },[])
+
   return (
-    <div>
- 
-    </div>
+    <Canvas>
+      <ambientLight/>
+      <pointLight position={[10,10,10]}/>
+      <Box position={[-1.2, 0, 0]}/>
+      <Box position={[1.2, 0, 0]}/>
+    </Canvas>
 
   )
 }
