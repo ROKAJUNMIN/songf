@@ -1,15 +1,17 @@
-import { useCallback, useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { useEffect } from "react"
+import Api, { Method } from "./api"
 
 function App() {
-  const [num ,setNum] = useState(0)
-  const onClick = useCallback(() => {
-    setNum((value) => value + 1)
+
+  useEffect(() => {
+    const data = async () => {
+      return await Api().getAlbum()
+    }
+    console.log(data())
   },[])
   return (
     <div>
-      <h2 onClick={onClick}>{num}</h2>
+ 
     </div>
 
   )
