@@ -11,6 +11,8 @@ const Home = () => {
             <Canvas>
                 <Suspense fallback={null}>
                     <OrbitControls/>
+                    <ambientLight intensity={0.5}/>
+                    <pointLight color="white" intensity={1} position={[10, 10, 10]} />
                     <primitive object={gltf.scene} scale={0.4}/>
                 </Suspense>
             </Canvas>
