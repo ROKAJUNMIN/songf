@@ -1,9 +1,19 @@
+import { Suspense } from 'react'
 import styled from "styled-components";
 import FlexBox from "../components/atom/FlexBox";
-
+import { Canvas, useLoader } from '@react-three/fiber'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+import { OrbitControls } from '@react-three/drei'
 const Home = () => {
+    const gltf = useLoader(GLTFLoader, './scene.gltf')
     return (
         <Container>
+            <Canvas>
+                <Suspense fallback={null}>
+                    <OrbitControls/>
+                    <primitive object={gltf.scene} scale={0.4}/>
+                </Suspense>
+            </Canvas>
             <FlexBox flexDirection="column">
                 <h2>hi</h2>
             </FlexBox>
