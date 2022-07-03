@@ -16,7 +16,7 @@ const Box = (props: JSX.IntrinsicElements['mesh']) => {
         onPointerOver={(e) => setHover(true)}
         onPointerOut={(e) => setHover(false)}
         >
-            <boxGeometry args={[1,1,1]}/>
+            <boxGeometry args={[2,2,2]}/>
             <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'}/>
         </mesh>
     )

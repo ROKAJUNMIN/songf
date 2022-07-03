@@ -1,18 +1,21 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import styled from "styled-components";
+import FlexBox from "./components/atom/FlexBox";
+import Home from "./pages/Home";
 
-import { Canvas } from "@react-three/fiber"
-import Box from "./components/Box"
 function App() {
-
-
-  return (
-    <Canvas>
-      <ambientLight/>
-      <pointLight position={[10,10,10]}/>
-      <Box position={[-1.2, 0, 0]}/>
-      <Box position={[1.2, 0, 0]}/>
-    </Canvas>
-
-  )
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Home />} />
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
-export default App
+export default App;
+
+const Container = styled.div`
+    width: 100%;
+    height: 100%;
+`;
