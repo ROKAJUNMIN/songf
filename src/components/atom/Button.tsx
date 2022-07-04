@@ -3,16 +3,18 @@ import styled from 'styled-components'
 interface Props {
     children: React.ReactNode
     onClick: () => any;
+    style?: React.CSSProperties
 }
-const Button: React.FC<Props> = ({ children, onClick }) => {
+const Button: React.FC<Props> = ({ children, onClick, style }) => {
     return (
-        <StyledButton onClick={onClick}>{children}</StyledButton>
+        <StyledButton style={style} onClick={onClick}>{children}</StyledButton>
     )
 }
 
 export default Button;
 
 const StyledButton = styled.button`
+    width: 100%;
     background-color: transparent;
     color: white;
     display: flex;
