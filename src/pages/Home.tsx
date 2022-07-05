@@ -2,14 +2,13 @@ import styled from "styled-components";
 import FlexBox from "../components/atom/FlexBox";
 import Menu from "../components/organisms/Menu";
 import { Canvas } from '@react-three/fiber'
-import {  Stars, OrbitControls } from '@react-three/drei'
+import Background from "../components/organisms/Background";
 const Home = () => {
- 
+  
     return (
         <Container>
             <Canvas>
-                <OrbitControls/>
-                <Stars/>
+                <Background/>
             </Canvas>
             <FlexBox flexDirection="column" style={{
                     width: '100%',
