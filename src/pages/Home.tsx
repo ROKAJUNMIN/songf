@@ -3,7 +3,6 @@ import FlexBox from "../components/atom/FlexBox";
 import Menu from "../components/organisms/Menu";
 import { Canvas } from '@react-three/fiber'
 import Background from "../components/organisms/Background";
-import Box from "../components/Box";
 const Home = () => {
   
     return (
