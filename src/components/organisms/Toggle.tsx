@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import FlexBox from '../atom/FlexBox'
-import { atom, useAtom } from 'jotai';
+import { toggleAtom } from '../../atom';
+import { useAtom } from 'jotai';
 const Toggle = () => {
-    const toggleAtom = atom(true);
     const [active, setActive] = useAtom(toggleAtom)
          return (
         <FlexBox flexDirection='horizontal' style={{

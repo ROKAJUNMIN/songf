@@ -14,13 +14,10 @@ const Header = () => {
                 border: "1px solid white",
                 alignItems: 'center',
                 justifyContent: 'center',
-                position: 'sticky',
             }}
         >
-            <Icons style={{
-                gap: '20%'
-            }}>
-                <Home color="white" size={50} onClick={() => navigate('/')}/>
+            <Icons >
+                <Home color="white" size={50} onClick={() => navigate('/')} style={{ marginRight: '50px'}}/>
                 <Stats color="white" size={50} onClick={() => navigate('/stats')}/>
             </Icons>
         </FlexBox>

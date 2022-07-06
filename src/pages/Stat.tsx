@@ -1,46 +1,11 @@
 import { RadarChart, Legend, PolarAngleAxis, PolarGrid, PolarRadiusAxis, Radar, ResponsiveContainer } from 'recharts';
 import styled from 'styled-components'
+import { toggleAtom } from '../atom';
 import Toggle from '../components/organisms/Toggle';
-
+import { favoriteData, feelingData } from '../data/chart'
+import { useAtom } from 'jotai'
 const Stat = () => {
-  const data = [
-    {
-      "subject": "Math",
-      "A": 120,
-      "B": 110,
-      "fullMark": 150
-    },
-    {
-      "subject": "Chinese",
-      "A": 98,
-      "B": 130,
-      "fullMark": 150
-    },
-    {
-      "subject": "English",
-      "A": 86,
-      "B": 130,
-      "fullMark": 150
-    },
-    {
-      "subject": "Geography",
-      "A": 99,
-      "B": 100,
-      "fullMark": 150
-    },
-    {
-      "subject": "Physics",
-      "A": 85,
-      "B": 90,
-      "fullMark": 150
-    },
-    {
-      "subject": "History",
-      "A": 65,
-      "B": 85,
-      "fullMark": 150
-    }
-  ]
+    const [active, setActive] = useAtom(toggleAtom)
     return (
         <Container>
           <div style={{
@@ -51,12 +16,11 @@ const Stat = () => {
           </div>
           <ChartWrapper>
             <ResponsiveContainer>
-            <RadarChart outerRadius={90} width={730} height={250} data={data}>
+            <RadarChart outerRadius={90} width={730} height={250} data={active ? feelingData : favoriteData} >
               <PolarGrid />
-              <PolarAngleAxis dataKey="subject" />
-              <PolarRadiusAxis angle={30} domain={[0, 150]} />
-              <Radar name="Mike" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
-              <Radar name="Lily" dataKey="B" stroke="#82ca9d" fill="#82ca9d" fillOpacity={0.6} />
+            <PolarAngleAxis dataKey={active ? "feeling" : "favorite" } tick={{ fill: 'white'}}/>
+              <PolarRadiusAxis angle={30} domain={[0, 100]} />
+              <Radar name="Junmin" dataKey="A" stroke="#ffffff" fill="#ffffff" fillOpacity={0.6} />
               <Legend />
             </RadarChart>
               </ResponsiveContainer>
