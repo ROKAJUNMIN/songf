@@ -13,7 +13,6 @@
     "@types/styled-components": "^5.1.25",
     "@types/three": "^0.141.0",
     "axios": "^0.27.2",
-    "drei": "^2.2.21",
     "jotai": "^1.7.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -21,8 +20,7 @@
     "recharts": "^2.1.12",
     "styled-components": "^5.3.5",
     "styled-icons": "^10.45.0",
-    "three": "^0.142.0",
-    "use-cannon": "^0.5.3"
+    "three": "^0.142.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",

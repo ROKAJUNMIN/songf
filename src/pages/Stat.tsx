@@ -18,7 +18,7 @@ const Stat = () => {
             <ResponsiveContainer>
             <RadarChart outerRadius={90} width={730} height={250} data={active ? feelingData : favoriteData} >
               <PolarGrid />
-            <PolarAngleAxis dataKey={active ? "feeling" : "favorite" } tick={{ fill: 'white'}}/>
+            <PolarAngleAxis dataKey={active ? "feeling" : "favorite" } tick={{ fill: 'white', fontSize: '12px'}}/>
               <PolarRadiusAxis angle={30} domain={[0, 100]} />
               <Radar name="Junmin" dataKey="A" stroke="#ffffff" fill="#ffffff" fillOpacity={0.6} />
               <Legend />

@@ -1,4 +1,4 @@
-import {  Stars, OrbitControls } from '@react-three/drei'
+import { Stars } from '@react-three/drei'
 import {useRef} from 'react'
 import { useFrame } from '@react-three/fiber'
 const Background = () => {

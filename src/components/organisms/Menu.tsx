@@ -8,9 +8,9 @@ const Menu = () => {
     return (
    
                 <FlexBox flexDirection="horizontal" style={{
-                border: '1px solid white',
                 width: '80%',
-                minHeight: '500px',
+                minHeight: '200px',
+                maxHeight: '400px',
                 justifyContent: 'center'
             }}>
                 <Button onClick={() => {
